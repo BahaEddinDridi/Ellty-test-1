@@ -10,4 +10,5 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
+  base: "/Ellty-test-1/",
 })
