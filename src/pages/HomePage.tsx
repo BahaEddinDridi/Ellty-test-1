@@ -10,7 +10,10 @@ const HomePage: React.FC = () => {
         <Button />
       </div>
       <div className="mt-[24px]">
-        <Checkbox />
+        <Checkbox label="Checkbox 1" />
+        <Checkbox label="Checkbox 1" />
+        <Checkbox label="Checkbox 1" />
+        <Checkbox label="Checkbox 1" />
       </div>
     </div>
   );

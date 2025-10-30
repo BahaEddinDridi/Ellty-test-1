@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 
-const Checkbox: React.FC = () => {
+interface CheckboxProps {
+  label: string;
+}
+
+const Checkbox: React.FC<CheckboxProps> = ({ label }) => {
   const [checked, setChecked] = useState(false);
   return (
-    <label className="inline-flex items-center cursor-pointer">
+    <label
+      className="flex bg-white items-center justify-between w-[370px] h-[42px] px-[22px] pr-[15px] py-[8px] cursor-pointer group"
+    >
+        <span
+        className="
+          text-gray-800 font-montserrat font-normal text-[14px] leading-[130%] align-middle"
+      >
+        {label}
+      </span>
+
       <input
         type="checkbox"
         checked={checked}
@@ -15,8 +28,8 @@ const Checkbox: React.FC = () => {
         className={`w-[25px] h-[25px] rounded-[6px] border flex items-center 
     justify-center ${
       checked
-        ? "bg-[#2469F6] text-white border-[#2469F6] hover:bg-[#5087F8] hover:border-[#5087F8] active:bg-[#2469F6] active:border-[#2469F6] active:outline active:outline-3 active:outline-[#2469F61A]"
-        : "bg-white text-white border-[#CDCDCD] hover:border-[#BDBDBD] hover:text-[#E3E3E3] active:border-[#BDBDBD] active:text-[#878787] active:outline active:outline-3 active:outline-[#2469F61A]"
+        ? "bg-[#2469F6] text-white border-[#2469F6] group-hover:bg-[#5087F8] group-hover:border-[#5087F8] group-active:bg-[#2469F6] group-active:border-[#2469F6] group-active:outline group-active:outline-3 group-active:outline-[#2469F61A]"
+        : "bg-white text-white border-[#CDCDCD] group-hover:border-[#BDBDBD] group-hover:text-[#E3E3E3] group-active:border-[#BDBDBD] group-active:text-[#878787] group-active:outline group-active:outline-3 group-active:outline-[#2469F61A]"
     }`}
       >
         <svg
@@ -36,5 +49,4 @@ const Checkbox: React.FC = () => {
     </label>
   );
 };
-
 export default Checkbox;
