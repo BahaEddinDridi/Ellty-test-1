@@ -5,7 +5,6 @@ function App() {
 
   return (
     <>
-      <h1>Ellty-test</h1>
       <HomePage />
     </>
   )
